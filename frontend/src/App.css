@@ -1,0 +1,305 @@
+nav ul li button {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.formFieldContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.shortForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.formFieldContainer label {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #061A40;
+}
+
+.formFieldContainer input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formFieldContainer select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.shortForm button {
+    margin: 0 auto;
+}
+
+.longForm {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.longForm>* {
+    width: 49%;
+}
+
+.longForm button {
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+.formIngredientesContainer {
+    width: 100%;
+}
+
+.checkboxesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.formCheckboxContainer {
+    width: 23%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.formCheckboxContainer input {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 99px;
+}
+
+.formCheckboxContainer label {
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.input-error {
+    border-color: #ff0000;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.platoGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.platoCard {
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #b9d6f2;
+    cursor: pointer;
+}
+
+.platoCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.platoCard h3 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #061A40;
+}
+
+.platoCard p {
+    margin: 0.3rem 0;
+    color: #4F5258;
+}
+
+.platoCard div span {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background-color: #CDD9F0;
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: #061A40;
+    text-transform: capitalize;
+}
+
+.filterControls {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filterControls select,
+.filterControls input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.recetaDetail {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.recetaDetail img {
+    max-width: 600px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.recetaInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.recetaInfo p {
+    font-size: 1.275rem;
+}
+
+.recetaInfo div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recetaInfo div div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.recetaInfo div div span {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 99px;
+    background-color: #CDD9F0;
+    color: #061A40;
+}
+
+.ingredientesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ingredientesList h3 {
+    text-transform: capitalize;
+}
+
+.ingredientesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    background: #f7fbff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 700px;
+}
+
+.usersTable th,
+.usersTable td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.usersTable thead {
+    background: #b9d6f2;
+}
+
+.usersTable th {
+    color: #061A40;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-bottom: 2px solid #CDD9F0;
+}
+
+.usersTable tbody tr {
+    border-bottom: 1px solid #e3eafc;
+    transition: background 0.2s;
+}
+
+.usersTable tbody tr:hover {
+    background: #eaf2fb;
+}
+
+.usersTable td {
+    color: #4F5258;
+    font-size: 1rem;
+}
+
+.userEditBtn,
+.userDeleteBtn {
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 0.1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.userEditBtn {
+    background: #f7c948;
+    color: #061A40;
+}
+
+.userEditBtn:hover {
+    background: #ffe082;
+}
+
+.userDeleteBtn {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+.userDeleteBtn:hover {
+    background: #d90429;
+}
+
+.filterDisabled {
+    background: #f0f0f0 !important;
+    color: #aaa !important;
+    cursor: not-allowed !important;
+    opacity: 0.7;
+}

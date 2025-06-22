@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación API de Recetas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Documentación API de Platos Típicos Argentinos</h1>
+        <nav>
+            <ul>
+                <li onclick="mostrarSeccion('containerPlatos')">Platos</li>
+                <li onclick="mostrarSeccion('containerIngredientes')">Ingredientes</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="containerPlatos" class="containerRutas">
+            <h2>Platos</h2>
+            <div class="containerEndpoints">
+                <div>
+                    <h3>Obtener todos los platos</h3>
+                    <p><span>GET</span> /api/platos</p>
+                </div>
+                <div>
+                    <h3>Obtener plato por nombre</h3>
+                    <p><span>GET</span> /api/platos/:nombre</p>
+                </div>
+                <div>
+                    <h3>Crear nuevo plato</h3>
+                    <p><span>POST</span> /api/platos</p>
+                </div>
+                <div>
+                    <h3>Actualizar plato</h3>
+                    <p><span>PUT</span> /api/platos/:id</p>
+                </div>
+                <div>
+                    <h3>Eliminar plato</h3>
+                    <p><span>DELETE</span> /api/platos/:id</p>
+                </div>
+                <div>
+                    <h3>Filtrar platos por tipo</h3>
+                    <p><span>GET</span> /api/platos/tipo/:tipo</p>
+                    <p class="aclaracion">Opciones: dulce / salado</p>
+                </div>
+                <div>
+                    <h3>Filtrar platos por dificultad</h3>
+                    <p><span>GET</span> /api/platos/dificultad/:dificultad</p>
+                    <p class="aclaracion">Opciones: fácil / media / difícil</p>
+                </div>
+                <div>
+                    <h3>Filtrar platos por tiempo de cocción</h3>
+                    <p><span>GET</span> /api/platos/tiempo/:tiempo</p>
+                    <p class="aclaracion">Escribí el tiempo máximo de la receta en mins.</p>
+                </div>
+            </div>
+        </div>
+        <div id="containerIngredientes" class="containerRutas">
+            <h2>Ingredientes</h2>
+            <div class="containerEndpoints">
+                <div>
+                    <h3>Obtener todos los ingredientes</h3>
+                    <p><span>GET</span> /api/ingredientes</p>
+                </div>
+                <div>
+                    <h3>Obtener ingrediente por ID</h3>
+                    <p><span>GET</span> /api/ingredientes/:id</p>
+                </div>
+                <div>
+                    <h3>Crear nuevo ingrediente</h3>
+                    <p><span>POST</span> /api/ingredientes</p>
+                </div>
+                <div>
+                    <h3>Actualizar ingrediente</h3>
+                    <p><span>PUT</span> /api/ingredientes/:id</p>
+                </div>
+                <div>
+                    <h3>Filtrar ingredientes por tipo</h3>
+                    <p><span>GET</span> /api/ingredientes/tipo/:tipo</p>
+                    <p class="aclaracion">Opciones: vegetal / carne / lácteo / cereal / condimento / otro</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><strong>Alumno:</strong> Lara Crupnicoff</p>
+        <p><strong>Materia:</strong> Aplicaciones Híbridas</p>
+        <p><strong>Docente:</strong> Cruz Jonathan Emanuel</p>
+        <p><strong>Comisión:</strong> DWT4AV</p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function mostrarSeccion(sectionId) {
+        document.querySelector('#containerPlatos').style.display = 'none';
+        document.querySelector('#containerIngredientes').style.display = 'none';
+
+        document.querySelector('#' + sectionId).style.display = 'block';
+    }
+
+    window.onload = function () {
+        mostrarSeccion('containerPlatos');
+    }
+</script>

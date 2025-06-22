@@ -24,7 +24,7 @@ Este proyecto es una aplicación web para la gestión y consulta de recetas típ
 
 ```bash
 git clone <url-del-repo>
-cd parcial-2
+cd parcial-2-AH
 ```
 
 ### 2. Configurar el backend
